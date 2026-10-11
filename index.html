@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>195 RCSCC Bicknell</title>
+<meta name="description" content="195 Royal Canadian Sea Cadet Corps Bicknell, Richmond, BC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topbar"></div>
+<header>
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#home">
+      <div class="badge">
+        <!-- Drop your corps badge at images/badge.png; the anchor shows until then -->
+        <img src="images/badge.png" alt="195 RCSCC Bicknell badge"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{innerHTML:document.getElementById('anchor').innerHTML}))">
+      </div>
+      <span>195 RCSCC Bicknell</span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="links">☰</button>
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<template id="anchor">
+  <svg width="48" height="48" viewBox="0 0 64 64" aria-hidden="true">
+    <circle cx="32" cy="32" r="30" fill="none" stroke="#c9a227" stroke-width="3"/>
+    <g fill="none" stroke="#e6cf7a" stroke-width="3.2" stroke-linecap="round">
+      <circle cx="32" cy="15" r="4"/><line x1="32" y1="19" x2="32" y2="50"/>
+      <line x1="23" y1="25" x2="41" y2="25"/>
+      <path d="M17 38c2 8 8 12 15 12s13-4 15-12"/>
+      <path d="M14 41l3-4 4 3M50 41l-3-4-4 3"/>
+    </g>
+  </svg>
+</template>
+
+<!-- ============ CYCLING PHOTO SLIDESHOW ============
+     Replace each image path with your photos (images/slide1.jpg etc.).
+     If a file is missing, the navy gradient behind it shows instead. -->
+<section class="slideshow" id="home" aria-roledescription="carousel" aria-label="Corps photos" style="padding:0">
+  <div class="slide active" style="background-image:url('images/slide1.jpg'),linear-gradient(135deg,#13305a,#0b1f3a 60%,#1c4a7a)"><div class="zoom"></div></div>
+  <div class="slide" style="background-image:url('images/slide2.jpg'),linear-gradient(135deg,#1c4a7a,#0b1f3a)"><div class="zoom"></div></div>
+  <div class="slide" style="background-image:url('images/slide3.jpg'),linear-gradient(135deg,#0b1f3a,#2a5d8f)"><div class="zoom"></div></div>
+  <div class="slide" style="background-image:url('images/slide4.jpg'),linear-gradient(135deg,#13305a,#3b6e9e)"><div class="zoom"></div></div>
+
+  <div class="caption" aria-live="polite">
+    <h2 id="cap-title">Join 195 Bicknell</h2>
+    <p id="cap-sub">Sea Cadets in Richmond, BC — ages 12 to 18</p>
+  </div>
+
+  <button class="ctrl prev" aria-label="Previous photo">‹</button>
+  <button class="ctrl next" aria-label="Next photo">›</button>
+  <div class="dots" role="tablist"></div>
+  <div class="progress"></div>
+</section>
+
+<section id="about">
+  <div class="wrap center">
+    <p class="eyebrow">Royal Canadian Sea Cadets</p>
+    <h1 class="title">Welcome to 195 RCSCC Bicknell</h1>
+    <div class="rule"></div>
+    <p class="lead">The Cadet Program gives young people the chance to learn practical skills, grow in confidence and get ready for adult life. Our cadets take on experiences they won't find anywhere else while building leadership, citizenship and physical and mental fitness.</p>
+    <p class="lead">At Bicknell, we're training tomorrow's leaders today, giving every cadet the tools to serve proudly as a Sea Cadet and as a member of the community.</p>
+
+    <div class="cards">
+      <a class="card" href="https://www.canada.ca/en/department-national-defence/services/cadets-junior-canadian-rangers/cadets/join-us.html" target="_blank" rel="noopener">
+        <div class="icon">⚓</div><h3>Join Us</h3><p>Free to join for youth aged 12–18. See how to register.</p>
+      </a>
+      <a class="card" href="#faq">
+        <div class="icon">🧭</div><h3>What We Do</h3><p>Sailing, seamanship, marksmanship, band, drill, leadership and summer training.</p>
+      </a>
+      <a class="card" href="#gallery">
+        <div class="icon">📷</div><h3>Gallery</h3><p>Photos from parade nights, competitions, ceremonies and the water.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTINUOUS GALLERY STRIP ============
+     Tiles are duplicated once so the loop is seamless — edit both halves. -->
+<section class="band" id="gallery">
+  <div class="wrap center">
+    <p class="eyebrow">Gallery</p>
+    <h2 class="title">Life at the Corps</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="marquee">
+    <div class="track" id="track"></div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="title">Common Questions</h2>
+    <div class="rule"></div>
+    <details><summary>Who can join?</summary><p>Youth aged 12 to 18 can join at any point in the training year.</p></details>
+    <details><summary>Does it cost anything?</summary><p>The Cadet Program is free. Uniforms are provided on loan.</p></details>
+    <details><summary>When do you meet?</summary><p>Add your regular parade night and times here.</p></details>
+    <details><summary>Do I need sailing experience?</summary><p>No. Cadets learn everything from the basics up, and can go on to advanced summer training.</p></details>
+    <p class="center"><a class="btn" href="https://www.canada.ca/en/department-national-defence/services/cadets-junior-canadian-rangers/cadets/join-us.html" target="_blank" rel="noopener">Register Now</a></p>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="fgrid">
+    <div>
+      <h3>195 RCSCC Bicknell</h3>
+      <p>Royal Canadian Sea Cadets<br>Supported by the Navy League of Canada</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:195sea@cadets.gc.ca">195sea@cadets.gc.ca</a><br>
+      Mail: 7411 River Rd, Richmond, BC</p>
+    </div>
+    <div>
+      <h3>Follow</h3>
+      <p><a href="https://www.instagram.com/195bicknell/" target="_blank" rel="noopener">Instagram @195bicknell</a><br>
+      <a href="https://bcmainland.ca" target="_blank" rel="noopener">Navy League – BC Mainland</a></p>
+    </div>
+  </div>
+  <p class="copy">© <span id="yr"></span> 195 RCSCC Bicknell</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
