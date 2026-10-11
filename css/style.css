@@ -1,0 +1,93 @@
+:root{
+  --navy:#0b1f3a; --navy-2:#13305a; --gold:#c9a227; --gold-soft:#e6cf7a;
+  --ink:#1b2430; --paper:#f6f4ee; --white:#fff; --muted:#5d6878;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:"Oswald",sans-serif;font-weight:600;letter-spacing:.02em;line-height:1.2}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* ---------- Header ---------- */
+.topbar{height:6px;background:linear-gradient(90deg,var(--gold),var(--gold-soft),var(--gold))}
+header{background:var(--navy);color:var(--white);position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.badge{width:52px;height:52px;flex:none;display:grid;place-items:center}
+.badge img{width:52px;height:52px;object-fit:contain}
+.brand span{font-family:"Oswald";font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase}
+.links{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.links a{display:block;padding:8px 12px;text-decoration:none;font-family:"Oswald";text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;border-bottom:2px solid transparent}
+.links a:hover,.links a:focus-visible{border-color:var(--gold);color:var(--gold-soft)}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;padding:6px 10px;border-radius:4px;font-size:1.1rem;cursor:pointer}
+@media (max-width:820px){
+  .menu-btn{display:block}
+  .links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--navy-2);flex-direction:column;padding:8px 16px 16px}
+  .links.open{display:flex}
+}
+
+/* ---------- Slideshow ---------- */
+.slideshow{position:relative;height:min(78vh,640px);min-height:360px;overflow:hidden;background:var(--navy)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;background-size:cover;background-position:center}
+.slide.active{opacity:1}
+.slide.active .zoom{animation:kenburns 7s ease-out forwards}
+.zoom{position:absolute;inset:0;background:inherit;background-size:cover;background-position:center}
+@keyframes kenburns{from{transform:scale(1.08)}to{transform:scale(1)}}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,31,58,.15) 30%,rgba(11,31,58,.85))}
+.caption{position:absolute;left:0;right:0;bottom:64px;z-index:2;color:#fff;text-align:center;padding:0 16px}
+.caption h2{font-size:clamp(1.6rem,4.5vw,3rem);margin:0 0 6px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.caption p{margin:0;font-size:1.1rem;color:var(--gold-soft)}
+.ctrl{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(11,31,58,.45);color:#fff;font-size:1.4rem;cursor:pointer;display:grid;place-items:center}
+.ctrl:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.prev{left:16px}.next{right:16px}
+.dots{position:absolute;bottom:22px;left:0;right:0;display:flex;justify-content:center;gap:10px;z-index:3}
+.dots button{width:12px;height:12px;border-radius:50%;border:2px solid #fff;background:transparent;padding:0;cursor:pointer}
+.dots button.on{background:var(--gold);border-color:var(--gold)}
+.progress{position:absolute;left:0;bottom:0;height:4px;background:var(--gold);z-index:3;width:0}
+
+/* ---------- Content ---------- */
+section{padding:72px 16px}
+.wrap{max-width:1080px;margin:auto}
+.eyebrow{color:var(--gold);font-family:"Oswald";letter-spacing:.2em;text-transform:uppercase;font-size:.9rem;margin:0}
+.title{font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--navy);margin:.2em 0 .6em}
+.rule{width:80px;height:3px;background:var(--gold);margin:0 0 28px}
+.center{text-align:center}.center .rule{margin-inline:auto}
+.lead{font-size:1.15rem;max-width:760px}
+.center .lead{margin-inline:auto}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:40px}
+.card{background:#fff;border-top:4px solid var(--gold);box-shadow:0 6px 24px rgba(11,31,58,.08);padding:28px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(11,31,58,.15)}
+.card h3{color:var(--navy);margin:.2em 0 .4em;font-size:1.4rem;text-transform:uppercase}
+.card p{margin:0;color:var(--muted)}
+.card .icon{font-size:2rem}
+
+.band{background:var(--navy);color:#fff}
+.band .title{color:#fff}
+
+/* Gallery marquee (continuous cycling strip) */
+.marquee{overflow:hidden;margin-top:36px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:16px;width:max-content;animation:scroll 50s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.tile{width:300px;height:200px;flex:none;border:3px solid var(--gold);background-size:cover;background-position:center;position:relative}
+.tile span{position:absolute;left:0;right:0;bottom:0;padding:6px 10px;background:rgba(11,31,58,.75);font-size:.9rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+.faq details{background:#fff;margin:10px 0;border-left:4px solid var(--gold);box-shadow:0 2px 10px rgba(11,31,58,.06)}
+.faq summary{cursor:pointer;padding:16px 20px;font-weight:600;color:var(--navy)}
+.faq details p{margin:0;padding:0 20px 18px;color:var(--muted)}
+
+.btn{display:inline-block;background:var(--gold);color:var(--navy);text-decoration:none;font-family:"Oswald";text-transform:uppercase;letter-spacing:.1em;padding:12px 28px;margin-top:12px;border:2px solid var(--gold)}
+.btn:hover{background:transparent;color:var(--gold)}
+
+/* ---------- Footer ---------- */
+footer{background:#071529;color:#cfd6e2;padding:48px 16px 24px}
+.fgrid{max-width:1080px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px}
+footer h3{color:var(--gold);text-transform:uppercase;font-size:1.05rem;margin-top:0}
+footer a{color:#fff}
+.copy{max-width:1080px;margin:32px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font-size:.85rem;text-align:center;color:#8d98aa}
+
+@media (prefers-reduced-motion:reduce){
+  .slide{transition:none}.slide.active .zoom{animation:none}.track{animation:none}
+}
