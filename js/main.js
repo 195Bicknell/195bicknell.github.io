@@ -1,8 +1,7 @@
 /* ---- Edit captions here (one per slide, same order) ---- */
 const captions = [
-  ["Join 195 Bicknell", "Sea Cadets in Richmond, BC — ages 12 to 18"],
+  ["Join 195 Bicknell", "Sea Cadets in Richmond, BC"],
   ["Lest We Forget", "Remembrance Day parade"],
-  ["Award-Winning Team", "3rd place finish"],
   ["Out on the Water", "Sailing and seamanship training"]
 ];
 /* ---- Gallery strip: [image path, caption] ---- */
