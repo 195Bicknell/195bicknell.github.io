@@ -1,16 +1,12 @@
 /* ---- Edit captions here (one per slide, same order) ---- */
 const captions = [
   ["Join 195 Bicknell", "Sea Cadets in Richmond, BC"],
-  ["Lest We Forget", "Remembrance Day parade"],
-  ["Out on the Water", "Sailing and seamanship training"]
-];
-/* ---- Gallery strip: [image path, caption] ---- */
-const gallery = [
-  ["images/gallery1.jpg","Parade night"],["images/gallery2.jpg","Sail training"],
-  ["images/gallery3.jpg","Annual Ceremonial Review"],["images/gallery4.jpg","Band"],
-  ["images/gallery5.jpg","Community events"],["images/gallery6.jpg","Summer training"]
-];
-const INTERVAL = 6000;
+  ["Seamanship", "Learn the art of navigation and ship handling"],
+  ["Sailing", "Experience the thrill of sailing on the water"],
+  ["Marksmanship", "Develop your precision skills and safety knowledge"],
+  ["Military Band", "Play and march in our military band"],
+  ["Drill & Ceremonial", "Master the precision of drill and ceremonial"],
+]
 
 // Slideshow
 const slides=[...document.querySelectorAll('.slide')], dotsEl=document.querySelector('.dots'),

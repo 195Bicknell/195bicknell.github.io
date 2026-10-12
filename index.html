@@ -15,7 +15,6 @@
   <nav class="nav" aria-label="Main">
     <a class="brand" href="#home">
       <div class="badge">
-        <!-- Drop your corps badge at images/badge.png; the anchor shows until then -->
         <img src="images/badge.png" alt="195 RCSCC Bicknell badge"
              onerror="this.replaceWith(Object.assign(document.createElement('div'),{innerHTML:document.getElementById('anchor').innerHTML}))">
       </div>
@@ -31,30 +30,20 @@
   </nav>
 </header>
 
-<template id="anchor">
-  <svg width="48" height="48" viewBox="0 0 64 64" aria-hidden="true">
-    <circle cx="32" cy="32" r="30" fill="none" stroke="#c9a227" stroke-width="3"/>
-    <g fill="none" stroke="#e6cf7a" stroke-width="3.2" stroke-linecap="round">
-      <circle cx="32" cy="15" r="4"/><line x1="32" y1="19" x2="32" y2="50"/>
-      <line x1="23" y1="25" x2="41" y2="25"/>
-      <path d="M17 38c2 8 8 12 15 12s13-4 15-12"/>
-      <path d="M14 41l3-4 4 3M50 41l-3-4-4 3"/>
-    </g>
-  </svg>
-</template>
-
 <!-- ============ CYCLING PHOTO SLIDESHOW ============
      Replace each image path with your photos (images/slide1.jpg etc.).
      If a file is missing, the navy gradient behind it shows instead. -->
-<section class="slideshow" id="home" aria-roledescription="carousel" aria-label="Corps photos" style="padding:0">
-  <div class="slide active" style="background-image:url('images/slide1.jpg'),linear-gradient(135deg,#13305a,#0b1f3a 60%,#1c4a7a)"><div class="zoom"></div></div>
-  <div class="slide" style="background-image:url('images/slide2.jpg'),linear-gradient(135deg,#1c4a7a,#0b1f3a)"><div class="zoom"></div></div>
-  <div class="slide" style="background-image:url('images/slide3.jpg'),linear-gradient(135deg,#0b1f3a,#2a5d8f)"><div class="zoom"></div></div>
-  <div class="slide" style="background-image:url('images/slide4.jpg'),linear-gradient(135deg,#13305a,#3b6e9e)"><div class="zoom"></div></div>
+<section class="slideshow" id="home" aria-roledescription="carousel" aria-label="Fun and Unique Experieces!" style="padding:0">
+  <div class="slide active" style="background-image:url('images/join.jpg'),linear-gradient(135deg,#13305a,#0b1f3a 60%,#1c4a7a)"><div class="zoom"></div></div>
+  <div class="slide" style="background-image:url('images/seamanship.jpg'),linear-gradient(135deg,#1c4a7a,#0b1f3a)"><div class="zoom"></div></div>
+  <div class="slide" style="background-image:url('images/sailing.jpg'),linear-gradient(135deg,#0b1f3a,#2a5d8f)"><div class="zoom"></div></div>
+  <div class="slide" style="background-image:url('images/marksmanship.jpg'),linear-gradient(135deg,#13305a,#3b6e9e)"><div class="zoom"></div></div>
+  <div class="slide" style="background-image:url('images/band.jpg'),linear-gradient(135deg,#0b1f3a,#2a5d8f)"><div class="zoom"></div></div>
+  <div class="slide" style="background-image:url('images/drill.jpg'),linear-gradient(135deg,#1c4a7a,#0b1f3a)"><div class="zoom"></div></div>
 
   <div class="caption" aria-live="polite">
     <h2 id="cap-title">Join 195 Bicknell</h2>
-    <p id="cap-sub">Sea Cadets in Richmond, BC — ages 12 to 18</p>
+    <p id="cap-sub">Sea Cadets in Richmond, BC for ages 12 to 18</p>
   </div>
 
   <button class="ctrl prev" aria-label="Previous photo">‹</button>
@@ -73,25 +62,12 @@
 
     <div class="cards">
       <a class="card" href="https://www.canada.ca/en/department-national-defence/services/cadets-junior-canadian-rangers/cadets/join-us.html" target="_blank" rel="noopener">
-        <div class="icon"></div><h3>Join Us</h3><p>Free to join for youth aged 12–18. See how to register.</p>
+        <div class="icon"></div><h3>Join Us</h3><p>For youth aged 12–18. See how to register.</p>
       </a>
       <a class="card" href="#faq">
         <div class="icon"></div><h3>What We Do</h3><p>Sailing, seamanship, marksmanship, band, drill, leadership and summer training.</p>
       </a>
     </div>
-  </div>
-</section>
-
-<!-- ============ CONTINUOUS GALLERY STRIP ============
-     Tiles are duplicated once so the loop is seamless — edit both halves. -->
-<section class="band" id="gallery">
-  <div class="wrap center">
-    <p class="eyebrow">Gallery</p>
-    <h2 class="title">Life at the Corps</h2>
-    <div class="rule"></div>
-  </div>
-  <div class="marquee">
-    <div class="track" id="track"></div>
   </div>
 </section>
 
@@ -101,12 +77,43 @@
     <h2 class="title">Common Questions</h2>
     <div class="rule"></div>
     <details><summary>Who can join?</summary><p>You have to be between the ages of 12 and 18 years; and a Canadian Citizen or landed immigrant. <br>Want to learn and participate in activities such as sailing, marksmanship, drill, citizenship, band and much more? There are many opportunities available to Cadets; it's your choice in what direction you wish to proceed.</p></details>
-    <details><summary>What does it cost to join?</summary><p>There is an optional $125 registration fee set by The Navy League Richmond-Delta Branch to cover incidentals. Cost for an additional sibling is $75. However, no cadet will be turned away, if unable to pay the cost. Upon joining, uniforms, accoutrements, specialty training and summer camp training are provided. In fact, you get paid to go to summer camp training!</p></details>
-    <details><summary>When do you meet?</summary><p>Add your regular parade night and times here.</p></details>
+    <details><summary>What does it cost to join?</summary><p>There is an optional $150 registration fee set by The Navy League Richmond-Delta Branch to cover incidentals. Cost for an additional sibling is $100. However, no cadet will be turned away, if unable to pay the cost. Upon joining, uniforms, accoutrements, specialty training and summer camp training are provided. In fact, you get paid to go to summer camp training!</p></details>
+    <details><summary>When do you meet?</summary><p>September to June, Wednesday nights from 1830-2130, with optional training on weekends</p></details>
     <details><summary>Do I have to join the Canadian Armed Forces?</summary><p>No, you are not required to join the Canadian Armed Forces. While you are introduced to the activities and certain traditions of the Canadian Armed Forces, there is no requirement to join the Forces. The Cadet Program is a great way to make friends, find out more about Canada, and develop new skills that will be with you for life, no matter what career you choose.</p></details>
-    <details><summary>How will Sea Cadets help me at school?</summary><p>You may be eligibel to receive High School Credits, Volunteer Hours and/or financial awards (Bursaries or Scholarships) for post-secondary. Your schoolwork will benefit from the problem-solving and leadership skills you will develop at cadets. The Sea Cadet Program will build your self confidence, efficiency, organizational skills, and prepare you to become a young adult.</p></details>
+    <details><summary>How will Sea Cadets help me at school?</summary><p>You may be eligible to receive High School Credits, Volunteer Hours and/or financial awards (Bursaries or Scholarships) for post-secondary. Your schoolwork will benefit from the problem-solving and leadership skills you will develop at cadets. The Sea Cadet Program will build your self confidence, efficiency, organizational skills, and prepare you to become a young adult.</p></details>
     <details><summary>More questions about Sea Cadets?</summary><p>195 RCSCC Bicknell meets on Wednesday nights September to June, from 6:30 to 9:30 pm at 7411 River Road, Richmond, BC.<br> We invite you to join us!</p></details>
     <p class="center"><a class="btn" href="https://www.canada.ca/en/department-national-defence/services/cadets-junior-canadian-rangers/cadets/join-us.html" target="_blank" rel="noopener">Register Now</a></p>
+  </div>
+</section>
+
+<section class="join-us" id="join-us">
+  <div class="wrap">
+    <p class="eyebrow">Join Us</p>
+    <h2 class="title">Come train with us</h2>
+    <div class="rule"></div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Meeting Times</h3>
+        <p>September to June<br>Wednesday evenings<br>6:30 pm to 9:30 pm</p>
+      </div>
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Location</h3>
+        <p>195 RCSCC Bicknell<br>7411 River Road<br>Richmond, BC</p>
+      </div>
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:195sea@cadets.gc.ca">195sea@cadets.gc.ca</a><br>
+        Questions about joining? Reach out and we’d be happy to help.</p>
+      </div>
+    </div>
+
+    <p class="center"><a class="btn" href="mailto:195sea@cadets.gc.ca">Email the Corps</a></p>
   </div>
 </section>
 
@@ -127,6 +134,7 @@
       <a href="https://bcmainland.ca" target="_blank" rel="noopener">Navy League – BC Mainland</a></p>
     </div>
   </div>
+  <p class="center">This is an unofficial website that is not intended to represent in any way the policies or procedures of either the DND, the CAF, or the Cadet Leagues of Canada. This is not a CAF website. The website is maintained on behalf of the Corps Local Committee for 195 RCSCC Bicknell.</p>
   <p class="copy">© <span id="yr"></span> 195 RCSCC Bicknell</p>
 </footer>
 
