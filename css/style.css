@@ -37,7 +37,7 @@ header{background:var(--navy);color:var(--white);position:sticky;top:0;z-index:5
 .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,31,58,.15) 30%,rgba(11,31,58,.85))}
 .caption{position:absolute;left:0;right:0;bottom:64px;z-index:2;color:#fff;text-align:center;padding:0 16px}
 .caption h2{font-size:clamp(1.6rem,4.5vw,3rem);margin:0 0 6px;text-transform:uppercase;text-shadow:0 2px 12px rgba(0,0,0,.5)}
-.caption p{margin:0;font-size:1.1rem;color:var(--gold-soft)}
+.caption p{margin:0;font-size:1.1rem;color:var(--paper)}
 .ctrl{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:rgba(11,31,58,.45);color:#fff;font-size:1.4rem;cursor:pointer;display:grid;place-items:center}
 .ctrl:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
 .prev{left:16px}.next{right:16px}
