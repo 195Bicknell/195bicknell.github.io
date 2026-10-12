@@ -1,5 +1,5 @@
 :root{
-  --navy:#0b1f3a; --navy-2:#13305a; --gold:#fd4a4a; --gold-soft:#f1a921;
+  --navy:#0b1f3a; --navy-2:#13305a; --gold:#fd4a4a; --gold-soft:#f6f4ee;
   --ink:#1b2430; --paper:#f6f4ee; --white:#fff; --muted:#785d5d;
 }
 *{box-sizing:border-box}
